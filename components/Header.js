@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { AiOutlineLogin, AiOutlineUserAdd } from 'react-icons/Ai';
+import { AiOutlineLogin, AiOutlineUserAdd } from 'react-icons/ai';
 
 function Header() {
     return (
