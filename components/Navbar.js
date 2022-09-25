@@ -1,13 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { AiOutlineShoppingCart } from 'react-icons/Ai';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 function Navbar() {
     return (
         <div className='flex flex-col justify-center items-center md:flex-row md:justify-start shadow-lg sticky'>
             <div className='logo my-2 mx-4 '>
                 <Link href={'/'}>
-                    <Image src='/img/logo.png' width={150} height={60} alt={''} />
+                    <Image src='/img/logo.png' width={150} height={60} alt={'logo'} />
                 </Link>
             </div>
             <div className='nav md:ml-10 flex'>

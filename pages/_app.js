@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import Head from 'next/head'
 import Header from '../components/Header'
+import Navbar from '../components/Navbar'
 
 
 function MyApp({ Component, pageProps }) {
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/img/logo.png" />
       </Head>
       <Header />
+      <Navbar />
       < Component {...pageProps} />
     </>
   )
