@@ -7,16 +7,16 @@ function Navbar() {
     const toggalChart = () => {
         if (ref.current.classList.contains('translate-x-full')) {
             ref.current.classList.remove('translate-x-full')
-            ref.current.classList.add('translate-x-0')
+            ref.current.classList.add('translate-x-0 hidden')
         }
         else if (!ref.current.classList.contains('translate-x-full')) {
-            ref.current.classList.remove('translate-x-0')
+            ref.current.classList.remove('translate-x-0 hidden')
             ref.current.classList.add('translate-x-full')
         }
     }
     const ref = useRef()
     return (
-        <div className='flex flex-col justify-center items-center md:flex-row md:justify-start shadow-lg sticky'>
+        <div className='sticky top-0 bg-white flex flex-col justify-center items-center md:flex-row md:justify-start shadow-lg'>
             <div className='logo my-2 mx-4 cursor-pointer'>
                 <Link href={'/'}>
                     <Image src='/img/logo.png' width={150} height={60} alt={'logo'} />
