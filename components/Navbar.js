@@ -21,7 +21,7 @@ function Navbar() {
 
             </div>
             <div className="cart absolute right-0 top-7 mx-7 hover:text-red-600 ">
-                <AiOutlineShoppingCart className="text-xl md:text-3xl" />
+                <AiOutlineShoppingCart className="text-2xl md:text-3xl" />
             </div>
         </div>
     )
