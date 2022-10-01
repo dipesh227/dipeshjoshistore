@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useRef } from "react";
-import { AiOutlineShoppingCart, AiFillCloseCircle } from 'react-icons/ai';
+import { AiOutlineShoppingCart, AiFillPlusCircle, AiFillMinusCircle, AiFillCloseCircle } from 'react-icons/ai';
+import { BsFillBagCheckFill } from 'react-icons/bs';
 
 function Navbar() {
     const toggalChart = () => {
@@ -36,14 +37,22 @@ function Navbar() {
             <div onClick={toggalChart} className=" cursor-pointer cart absolute right-0 top-7 mx-7 hover:text-red-600 ">
                 <AiOutlineShoppingCart className="text-2xl hover:text-3xl md:text-3xl md:hover:text-4xl" />
             </div>
-            <div ref={ref} className="sideCart absolute top-16 right-0 bg-orange-100 py-10 px-2 w-80 transform transition-transform translate-x-full hidden">
-                <h2 className="font-bold text-xl items-center">Shopping Chart</h2>
-                <span onClick={toggalChart} className=" hover:text-red-600 hover:text-2xl absolute top-4 right-8 text-xl cursor-pointer text-orange-400 "><AiFillCloseCircle /></span>
-                <ol>
+            <div ref={ref} className="h-[100vh] sideCart absolute top-7 right-0 bg-white rounded-md border py-10 pl-10 pr-2 w-80 transform transition-transform translate-x-full hidden">
+                <h2 className="font-bold text-xl text-center">Shopping Chart</h2><hr className="mt-2 w-full" />
+                <span onClick={toggalChart} className=" hover:text-orange-500 hover:shadow-2xl text-2xl absolute top-4 right-8  cursor-pointer text-orange-400 "><AiFillCloseCircle /></span>
+                <ol className="list-decimal font-semibold">
                     <li>
-                        <span> cart it is</span>
+                        <div className="item flex">
+                            <div className="w-2/3 font-semibold my-5"> cart it is</div>
+                            <div className=" flex font-semibold items-center justify-end w-2/3 text-xl">
+                                <AiFillMinusCircle className="mx-4 text-orange-400 cursor-pointer hover:text-orange-600" />
+                                <span>1</span>
+                                <AiFillPlusCircle className="mx-4 text-orange-400 cursor-pointer hover:text-orange-600" />
+                            </div>
+                        </div>
                     </li>
                 </ol>
+                <button class="flex mx-auto mt-16 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"><BsFillBagCheckFill className="m-1 mx-3" />Checkout</button>
             </div>
         </div>
     )

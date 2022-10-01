@@ -12,7 +12,7 @@ function Tshirts() {
                     <Link href={'/product/code'} >
                         <div className="cursor-pointer shadow-2xl m-10 lg:w-1/4 md:w-1/2 p-5 w-full">
                             <a className="block rounded md:h-auto overflow-hidden">
-                                <Image width={380} height={400} alt="ecommerce" className=" h-{10vh} block" src="/img/mug.webp" />
+                                <Image width={380} height={400} alt="ecommerce" layout="fill" className=" h-{10vh} block" src="/img/mug.webp" />
                             </a>
                             <div className="mt-4 text-center">
                                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
