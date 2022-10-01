@@ -36,7 +36,7 @@ function Navbar() {
             <div onClick={toggalChart} className=" cursor-pointer cart absolute right-0 top-7 mx-7 hover:text-red-600 ">
                 <AiOutlineShoppingCart className="text-2xl hover:text-3xl md:text-3xl md:hover:text-4xl" />
             </div>
-            <div ref={ref} className="sideCart absolute top-16 right-0 bg-orange-100 py-10 px-2 w-80 transform transition-transform translate-x-full">
+            <div ref={ref} className="sideCart absolute top-16 right-0 bg-orange-100 py-10 px-2 w-80 transform transition-transform translate-x-full hidden">
                 <h2 className="font-bold text-xl items-center">Shopping Chart</h2>
                 <span onClick={toggalChart} className=" hover:text-red-600 hover:text-2xl absolute top-4 right-8 text-xl cursor-pointer text-orange-400 "><AiFillCloseCircle /></span>
                 <ol>
