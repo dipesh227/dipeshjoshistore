@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import { useRef } from "react";
 import { AiOutlineShoppingCart, AiFillPlusCircle, AiFillMinusCircle, AiFillCloseCircle } from 'react-icons/ai';
@@ -23,7 +22,7 @@ function Navbar() {
         <div className='sticky top-0 bg-white flex flex-col justify-center items-center md:flex-row md:justify-start shadow-lg'>
             <div className='logo my-2 mx-4 cursor-pointer'>
                 <Link href={'/'}>
-                    <Image src='/img/logo.png' width={150} height={60} alt={'logo'} />
+                    <img src='/img/logo.png' width={150} height={60} alt={'logo'} />
                 </Link>
             </div>
             <div className='nav md:ml-10 flex'>

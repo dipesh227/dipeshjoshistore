@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -9,7 +8,7 @@ function Footer() {
                 <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
                     <Link href={"/"}>
                         <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                            <Image src={'/img/logo.png'} alt='DIpesh' width={200} height={80} />
+                            <img src={'/img/logo.png'} alt='DIpesh' width={200} height={80} />
                         </a>
                     </Link>
                     <p class="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
