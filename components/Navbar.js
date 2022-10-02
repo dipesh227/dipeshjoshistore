@@ -83,8 +83,8 @@ function Navbar() {
                 </ol>
                 <div className="flex mt-5 ">
 
-                    <button class="flex  text-white bg-orange-500 border-0 py-2 px-3 focus:outline-none hover:bg-orange-600 rounded text-lg"><BsFillBagCheckFill className="m-1 mr-2" />Checkout</button>
-                    <button class="flex mx-auto  text-white bg-orange-500 border-0 py-2 px-3 focus:outline-none hover:bg-orange-600 rounded text-lg">Clear Cart</button>
+                    <button className="flex  text-white bg-orange-500 border-0 py-2 px-3 focus:outline-none hover:bg-orange-600 rounded text-lg"><BsFillBagCheckFill className="m-1 mr-2" />Checkout</button>
+                    <button className="flex mx-auto  text-white bg-orange-500 border-0 py-2 px-3 focus:outline-none hover:bg-orange-600 rounded text-lg">Clear Cart</button>
                 </div>
             </div>
         </div>
