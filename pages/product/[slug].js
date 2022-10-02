@@ -99,7 +99,7 @@ const Post = () => {
                             </button>
                         </div>
                         <div className="pincode flex justify-center md:justify-start mt-10">
-                            <input onChange={onChangePin} type="text" name="pincode" id="pincode" placeholder="Input Your Pin Code" className="p-2 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-500 font-bold border-orange-400 border rounded-md md:w-1/3" />
+                            <input onChange={onChangePin} type="text" name="pincode" id="pincode" placeholder="Input Your Pin Code" className="p-2 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-500 font-bold border-orange-400 border rounded-md md:w-2/3" />
                             <button onClick={checkService} class="flex ml-8 text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">Check</button>
                         </div>
                         {(!service && service != null) && <div className=" text-red-700 mt-3 font-bold">
