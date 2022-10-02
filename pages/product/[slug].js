@@ -1,8 +1,23 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Post = () => {
     const router = useRouter()
     const { slug } = router.query
+    const [pin, setPin] = useState()
+    const [service, setService] = useState()
+    const checkService = async () => {
+        let pins = await fetch('http://localhost:3000/api/pincode')
+        let pinjson = await pins.json()
+        if (pinjson.includes(parseInt(pin))) {
+            setService(true)
+        } else {
+            setService(false)
+        }
+    }
+    const onChangePin = (e) => {
+        setPin(e.target.value)
+    }
     return <>
         <section class="text-gray-600 body-font overflow-hidden">
             <div class="container px-5 py-16 mx-auto">
@@ -58,8 +73,8 @@ const Post = () => {
                             </div>
                             <div class="flex ml-6 items-center">
                                 <span class="mr-3">Size</span>
-                                <div class="relative">
-                                    <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-500 text-base pl-3 pr-10">
+                                <div class="">
+                                    <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-500 text-base pl-3 pr-10 cu">
                                         <option>SM</option>
                                         <option>M</option>
                                         <option>L</option>
@@ -73,19 +88,30 @@ const Post = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="flex">
-                            <span class="title-font font-medium text-2xl text-gray-900">$58.00</span>
-                            <button class="flex ml-16 text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">Add to Cart</button>
+                        <div class="flex justify-between md:justify-start">
+                            <span class="title-font font-medium text-2xl text-gray-900">₹ 499.00</span>
+                            <button class="flex ml-1 px-2 md:ml-6 text-white bg-orange-500 border-0 py-2 md:px-6 focus:outline-none hover:bg-orange-600 rounded">Add to Cart</button>
+                            <button class="flex ml-1 px-2 md:ml-6 text-white bg-orange-500 border-0 py-2 md:px-6 focus:outline-none hover:bg-orange-600 rounded">Buy Now</button>
                             <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                                 <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                                 </svg>
                             </button>
                         </div>
+                        <div className="pincode flex justify-center md:justify-start mt-10">
+                            <input onChange={onChangePin} type="text" name="pincode" id="pincode" placeholder="Input Your Pin Code" className="p-2 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-orange-500 font-bold border-orange-400 border rounded-md md:w-1/3" />
+                            <button onClick={checkService} class="flex ml-8 text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">Check</button>
+                        </div>
+                        {(!service && service != null) && <div className=" text-red-700 mt-3 font-bold">
+                            Sorry, We Do not Deliver at this pin code
+                        </div>}
+                        {(service && service != null) && <div className=" text-green-700 mt-3 font-bold">
+                            yah, dilivery is on set
+                        </div>}
                     </div>
                 </div>
             </div>
         </section>
-        the sluge for qury is : {slug}</>
+    </>
 }
 export default Post
