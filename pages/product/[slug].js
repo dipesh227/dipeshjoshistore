@@ -7,7 +7,7 @@ const Post = () => {
     const [pin, setPin] = useState()
     const [service, setService] = useState()
     const checkService = async () => {
-        let pins = await fetch('http://localhost:3000/api/pincode')
+        let pins = await fetch('http://localhost:3000/api/pincode' || 'https://dipeshjoshistore.vercel.app/api/pincode')
         let pinjson = await pins.json()
         if (pinjson.includes(parseInt(pin))) {
             setService(true)
