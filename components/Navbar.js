@@ -50,8 +50,42 @@ function Navbar() {
                             </div>
                         </div>
                     </li>
+                    <li>
+                        <div className="item flex">
+                            <div className="w-2/3 font-semibold my-5"> cart it is</div>
+                            <div className=" flex font-semibold items-center justify-end w-2/3 text-xl">
+                                <AiFillMinusCircle className="mx-4 text-orange-400 cursor-pointer hover:text-orange-600" />
+                                <span>1</span>
+                                <AiFillPlusCircle className="mx-4 text-orange-400 cursor-pointer hover:text-orange-600" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="item flex">
+                            <div className="w-2/3 font-semibold my-5"> cart it is</div>
+                            <div className=" flex font-semibold items-center justify-end w-2/3 text-xl">
+                                <AiFillMinusCircle className="mx-4 text-orange-400 cursor-pointer hover:text-orange-600" />
+                                <span>1</span>
+                                <AiFillPlusCircle className="mx-4 text-orange-400 cursor-pointer hover:text-orange-600" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="item flex">
+                            <div className="w-2/3 font-semibold my-5"> cart it is</div>
+                            <div className=" flex font-semibold items-center justify-end w-2/3 text-xl">
+                                <AiFillMinusCircle className="mx-4 text-orange-400 cursor-pointer hover:text-orange-600" />
+                                <span>1</span>
+                                <AiFillPlusCircle className="mx-4 text-orange-400 cursor-pointer hover:text-orange-600" />
+                            </div>
+                        </div>
+                    </li>
                 </ol>
-                <button class="flex mx-auto mt-16 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"><BsFillBagCheckFill className="m-1 mx-3" />Checkout</button>
+                <div className="flex mt-5 ">
+
+                    <button class="flex  text-white bg-orange-500 border-0 py-2 px-3 focus:outline-none hover:bg-orange-600 rounded text-lg"><BsFillBagCheckFill className="m-1 mr-2" />Checkout</button>
+                    <button class="flex mx-auto  text-white bg-orange-500 border-0 py-2 px-3 focus:outline-none hover:bg-orange-600 rounded text-lg">Clear Cart</button>
+                </div>
             </div>
         </div>
     )
