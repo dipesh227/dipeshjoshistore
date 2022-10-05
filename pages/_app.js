@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   const [subtotal, setSubtotal] = useState(0)
 
   useEffect(() => {
-    console.log('hy')
+    // console.log('hy')
     try {
       if (localStorage.getItem("cart")) {
         setCart(JSON.parse(localStorage.getItem("cart")))
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   const saveCart = (myCart) => {
-    // console.log(localStorage.setItem("cart", JSON.stringify(myCart)))
+    console.log(localStorage.setItem("cart", JSON.stringify(myCart)))
 
     let subt = 0;
     let keys = Object.keys(cart)
@@ -47,9 +47,8 @@ function MyApp({ Component, pageProps }) {
 
   const clearCart = () => {
     setCart({})
-    localStorage.clear()
-    // saveCart({})
-    // console.log('Cart is clear')
+    saveCart({})
+    console.log('Cart is clear')
 
   }
 
