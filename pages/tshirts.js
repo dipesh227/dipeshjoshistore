@@ -34,7 +34,7 @@ function Tshirts() {
                             </div>
                         </div>
                     </Link>
-                    <Link href={'/product/code'} >
+                    <Link href={'/product/mug'} >
                         <div className="cursor-pointer shadow-2xl m-10 lg:w-1/4 md:w-1/2 p-5 w-full">
                             <a className="block rounded md:h-auto overflow-hidden">
                                 <img width={380} height={400} alt="ecommerce" className="i h-{10vh} block" src="/img/mug.webp" />

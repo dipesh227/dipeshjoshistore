@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const Post = () => {
+const Post = ({ addToCart }) => {
     const router = useRouter()
     const { slug } = router.query
     const [pin, setPin] = useState()
@@ -90,7 +90,7 @@ const Post = () => {
                         </div>
                         <div className="flex justify-between md:justify-start">
                             <span className="title-font font-medium text-2xl text-gray-900">₹ 499.00</span>
-                            <button className="flex ml-1 px-2 md:ml-6 text-white bg-orange-500 border-0 py-2 md:px-6 focus:outline-none hover:bg-orange-600 rounded">Add to Cart</button>
+                            <button onClick={() => { addToCart(slug, 5, 499, 'wear', 'xl', 'red') }} className="flex ml-1 px-2 md:ml-6 text-white bg-orange-500 border-0 py-2 md:px-6 focus:outline-none hover:bg-orange-600 rounded">Add to Cart</button>
                             <button className="flex ml-1 px-2 md:ml-6 text-white bg-orange-500 border-0 py-2 md:px-6 focus:outline-none hover:bg-orange-600 rounded">Buy Now</button>
                             <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                                 <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
