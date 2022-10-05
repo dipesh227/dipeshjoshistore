@@ -215,7 +215,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
           </div>
 
           <div className="mt-5 flex mr-5 justify-end">
-            <Link href={`${subtotal == 0 ? "/" : "/checkout"}`}>
+            <Link href={`${subtotal == 0 ? "/" : "/order"}`}>
               <button
                 type="button"
                 className={`flex text-white bg-orange-500 border-0 py-2 px-3 focus:outline-none hover:bg-orange-600 rounded text-lg ${
