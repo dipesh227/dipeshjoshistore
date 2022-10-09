@@ -16,9 +16,9 @@ const Forgetpassword = () => {
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or
-              <Link href="/signup">
+              <Link href="/login">
                 <span className="font-medium ml-2 cursor-pointer text-orange-600 hover:text-orange-500">
-                  Signup
+                  Sign in
                 </span>
               </Link>
             </p>
@@ -51,16 +51,6 @@ const Forgetpassword = () => {
               </button>
             </div>
           </form>
-          <div className=" text-center">
-            <div className="text-sm">
-              <a
-                href="/login"
-                className="font-medium text-orange-600 hover:text-orange-500"
-              >
-                Login Now
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </>

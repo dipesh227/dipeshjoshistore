@@ -219,7 +219,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
               <button
                 type="button"
                 className={`flex text-white bg-orange-500 border-0 py-2 px-3 focus:outline-none hover:bg-orange-600 rounded text-lg ${
-                  subtotal == 0 ? "cursor-not-allowed opacity-50" : ""
+                  subtotal == 0 ? "cursor-not-allowed " : ""
                 }`}
               >
                 Pay ₹ {subtotal}
